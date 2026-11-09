@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, nosnippet">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; base-uri &#39;none&#39;; object-src &#39;none&#39;; form-action &#39;none&#39;; script-src &#39;sha256-CrWe1D6yPNAn0spSq0voFMg12aadvuVqVBldO5ouXKE=&#39;; style-src &#39;sha256-CXlqTFmYvFeNhuk+NG6iUxM3Jsi6YA621dYDtTDWfRs=&#39;; connect-src https://deskwellhq.com https://474936.xyz https://www.deskwellhq.com https://www.474936.xyz;">
+  <meta name="color-scheme" content="dark">
+  <title>Open Deskwell</title>
+  <style>:root { color-scheme: dark; --bg: #15171a; --text: #f0efeb; --muted: #a8abb0; --line: #2e3339; --accent: #ef7e59; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+::selection { background: var(--accent); color: var(--bg); }
+main { max-width: 760px; margin: 0 auto; padding: 40px 28px 48px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 14px; }
+.wordmark { font: 26px/1.2 Georgia, "Times New Roman", serif; color: var(--text); }
+h1 { max-width: 19ch; margin: 64px 0 20px; font: 38px/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.03em; text-wrap: balance; }
+.intro { max-width: 55ch; color: var(--muted); margin-bottom: 36px; }
+.checks { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.checks p { flex: 1 1 240px; margin: 0; }
+button, .open { min-height: 44px; padding: 9px 16px; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; }
+button { background: transparent; color: var(--text); border: 1px solid var(--line); }
+button:hover { background: #22262b; }
+button:disabled { cursor: wait; color: var(--muted); }
+button[hidden] { display: none; }
+a { color: var(--text); text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+li { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+li div { min-width: 0; }
+li p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+li p[data-reached] { color: var(--text); }
+.open { flex-shrink: 0; color: var(--bg); background: var(--accent); text-decoration: none; }
+.open:hover { background: #f49370; color: var(--bg); }
+.notice { color: var(--muted); font-size: 14px; }
+.notice:empty { display: none; }
+section { margin-top: 40px; }
+h2 { font-size: 18px; line-height: 1.3; margin-bottom: 12px; }
+section p { color: var(--muted); margin: 12px 0; max-width: 68ch; }
+footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+@media (max-width: 480px) { main { padding: 24px 20px 32px; } h1 { font-size: 32px; margin-top: 44px; } li { gap: 12px; } }
+</style>
+</head>
+<body>
+  <main>
+    <header><span class="wordmark">Deskwell</span><span>Access page</span></header>
+    <h1>Find a way to your workspace.</h1>
+    <p class="intro">Choose an address below. We check which ones respond from this browser.</p>
+    <div class="checks"><p id="summary" role="status">Addresses are ready to open.</p><button id="check" type="button" hidden>Check again</button></div>
+    <ul aria-label="Approved Deskwell addresses"><li><div><a href="https://deskwellhq.com/" rel="noreferrer">deskwellhq.com</a><p id="status-0">Not checked yet</p></div><a class="open" href="https://deskwellhq.com/" rel="noreferrer" aria-label="Open deskwellhq.com">Open</a></li>
+<li><div><a href="https://474936.xyz/" rel="noreferrer">474936.xyz</a><p id="status-1">Not checked yet</p></div><a class="open" href="https://474936.xyz/" rel="noreferrer" aria-label="Open 474936.xyz">Open</a></li>
+<li><div><a href="https://www.deskwellhq.com/" rel="noreferrer">www.deskwellhq.com</a><p id="status-2">Not checked yet</p></div><a class="open" href="https://www.deskwellhq.com/" rel="noreferrer" aria-label="Open www.deskwellhq.com">Open</a></li>
+<li><div><a href="https://www.474936.xyz/" rel="noreferrer">www.474936.xyz</a><p id="status-3">Not checked yet</p></div><a class="open" href="https://www.474936.xyz/" rel="noreferrer" aria-label="Open www.474936.xyz">Open</a></li></ul>
+    <p class="notice"></p>
+    <section aria-labelledby="help-title">
+      <h2 id="help-title">If a check fails</h2>
+      <p>Try opening the address anyway. A browser check can fail even when a page opens. If it still won’t load, try another listed address.</p>
+      <p>“Address responds” only means the access route answered. It does not confirm sign-in, files or AI. You may need to sign in again on a different address.</p>
+    </section>
+    <noscript><p>Checks need JavaScript. The addresses above still work as ordinary links.</p></noscript>
+    <footer>Save this page and an alternate address before you need them. This page can also be blocked.</footer>
+  </main>
+  <script>const approvedOrigins = ["https://deskwellhq.com","https://474936.xyz","https://www.deskwellhq.com","https://www.474936.xyz"];
+/* global approvedOrigins */
+const button = document.getElementById("check");
+const summary = document.getElementById("summary");
+const controllers = new Set();
+let running = false;
+
+async function checkAddresses() {
+  if (running) return;
+  running = true;
+  button.disabled = true;
+  summary.textContent = "Checking addresses from this browser…";
+  let reached = 0;
+  await Promise.all(approvedOrigins.map(async (origin, index) => {
+    const status = document.getElementById(`status-${index}`);
+    status.textContent = "Checking…";
+    const controller = new AbortController();
+    controllers.add(controller);
+    let timer;
+    try {
+      // Race the deadline too: even a fetch implementation that ignores abort
+      // must not leave the controls waiting forever. Never send account cookies.
+      const response = await Promise.race([
+        fetch(`${origin}/api/access-check`, {
+          method: "HEAD", mode: "cors", credentials: "omit", cache: "no-store",
+          redirect: "error", referrerPolicy: "no-referrer", signal: controller.signal,
+        }),
+        new Promise((_, reject) => {
+          timer = setTimeout(() => { controller.abort(); reject(new Error("deadline")); }, 2500);
+        }),
+      ]);
+      if (response.status === 204 && response.headers.get("X-DeskWell-Access") === "route-v1") {
+        status.textContent = "Address responds";
+        status.dataset.reached = "true";
+        reached++;
+      } else {
+        status.textContent = "Could not confirm — try opening";
+        delete status.dataset.reached;
+      }
+    } catch {
+      status.textContent = "Could not confirm — try opening";
+      delete status.dataset.reached;
+    } finally {
+      clearTimeout(timer);
+      controllers.delete(controller);
+    }
+  }));
+  summary.textContent = reached ? `${reached} ${reached === 1 ? "address responds" : "addresses respond"}. Choose one to continue.` : "No addresses confirmed. Try opening one manually.";
+  running = false;
+  button.disabled = false;
+}
+
+button.hidden = false;
+button.addEventListener("click", checkAddresses);
+window.addEventListener("pagehide", () => { for (const controller of controllers) controller.abort(); });
+// A single bounded pass. No polling, navigation, saved redirect or URL input.
+void checkAddresses();
+</script>
+</body>
+</html>

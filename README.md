@@ -1,0 +1,1 @@
+Standalone Deskwell access page. The page uses browser-only address checks and normal links; it handles no credentials or account data. The app itself is hosted separately. A successful address check proves route reachability, not full service health.

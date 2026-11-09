@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'sha256-CrWe1D6yPNAn0spSq0voFMg12aadvuVqVBldO5ouXKE='; style-src 'sha256-CXlqTFmYvFeNhuk+NG6iUxM3Jsi6YA621dYDtTDWfRs='; connect-src https://deskwellhq.com https://474936.xyz https://www.deskwellhq.com https://www.474936.xyz; frame-ancestors 'none';
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'sha256-MqN1QRuX6jZ6L3O3wOpHrVYn7guV7J6i4U8nka5sFXc='; style-src 'sha256-CXlqTFmYvFeNhuk+NG6iUxM3Jsi6YA621dYDtTDWfRs='; connect-src https://deskwellhq.com https://474936.xyz https://www.deskwellhq.com https://www.474936.xyz https://deskwell-independent-gateway.netlify.app; frame-ancestors 'none';
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: no-referrer
